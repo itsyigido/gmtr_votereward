@@ -1,7 +1,5 @@
 # gmtr_votereward
 
-[gmtr_votereward](https://github.com/itsyigido/gmtr_votereward) © 2026 by [itsyigido](https://github.com/itsyigido) is licensed under [Creative Commons Attribution-NonCommercial 4.0 International](https://creativecommons.org/licenses/by-nc/4.0/)
-
 **[gmod.tr](https://gmod.tr) sunucu listesi için oy ödülü eklentisi.** Oyuncular gmod.tr'de sunucunuza oy verir, oyun içinde `/reward` yazar ve ödüllerini alır. Oyun doğrulaması gmod.tr'nin resmî API'si üzerinden sunucu tarafında yapılır, bu yüzden aynı oy iki kez kullanılamaz ve oyuncu sahte oy bildiremez.
 
 Helix ve DarkRP ile kutudan çıktığı gibi çalışır. İkisi de yoksa sandbox tabanlı sunucularda da çalışır.
