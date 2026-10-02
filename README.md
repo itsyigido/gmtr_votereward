@@ -106,7 +106,3 @@ lua/gmtr_votereward/sv_config.lua    API anahtarı (gizli)
 lua/gmtr_votereward/sv_votereward.lua  API, çekiliş, teslim, bekleyen ödüller
 lua/gmtr_votereward/cl_votereward.lua  sohbet mesajı ve oy sayfası
 ```
-
-## Lisans
-
-Lisans eklemek isterseniz buraya yazın.
