@@ -2,7 +2,7 @@
 
 **[gmod.tr](https://gmod.tr) sunucu listesi için oy ödülü eklentisi.** Oyuncular gmod.tr'de sunucunuza oy verir, oyun içinde `/reward` yazar ve ödüllerini alır. Oyun doğrulaması gmod.tr'nin resmî API'si üzerinden sunucu tarafında yapılır, bu yüzden aynı oy iki kez kullanılamaz ve oyuncu sahte oy bildiremez.
 
-Helix ve DarkRP ile kutudan çıktığı gibi çalışır. İkisi de yoksa sade (sandbox tabanlı) sunucularda da çalışır.
+Helix ve DarkRP ile kutudan çıktığı gibi çalışır. İkisi de yoksa sandbox tabanlı sunucularda da çalışır.
 
 ---
 
@@ -11,7 +11,7 @@ Helix ve DarkRP ile kutudan çıktığı gibi çalışır. İkisi de yoksa sade 
 - **Sunucu taraflı oy doğrulaması:** `POST /votes/{steamid64}/claim` ile oy, gmod.tr tarafında tek seferlik olarak harcanır. Oy verilmemişse, ödül o gün zaten alınmışsa veya istek sınırına takılınmışsa oyuncuya Türkçe açıklama gösterilir.
 - **Ağırlıklı rastgele ödül havuzu:** Her oyda havuzdan tek bir ödül çekilir. Şansı `weight / toplam weight` olarak hesaplanır. Düşük ihtimalli nadir ödüller kolayca tanımlanır.
 - **Çerçeveye göre ödül tipleri**
-  | Tip | Helix | DarkRP | Sade |
+  | Tip | Helix | DarkRP | Sandbox |
   |---|:-:|:-:|:-:|
   | `money` (para) | ✔ karakter parası | ✔ `addMoney` | ✖ |
   | `item` (envanter eşyası) | ✔ envanter doluysa yere düşer | ✖ | ✖ |
@@ -38,7 +38,7 @@ Helix ve DarkRP ile kutudan çıktığı gibi çalışır. İkisi de yoksa sade 
 | **gmod.tr API v1** | `https://gmod.tr/api/v1`, `Bearer gmtr_...` sunucu anahtarı. Kullanılan uçlar: `GET /server`, `GET /votes/{sid64}`, `POST /votes/{sid64}/claim` ([geliştirici belgesi](https://gmod.tr/devs.md)) |
 | **Helix** | Komutlar `ix.command` ile kaydedilir (sohbet tamamlama ve komut listesinde görünür). Ödül o anki karaktere verilir. Hatırlatma ve bekleyen ödül teslimi `PlayerLoadedCharacter` ile tetiklenir. |
 | **DarkRP** | Komutlar `/` ve `!` önekiyle `PlayerSay` üzerinden çalışır. Para `addMoney` ile verilir. Koliler `CustomShipments` içinde adla bulunup oyuncunun önüne bırakılır. |
-| **Sade sunucu** | `PlayerSay` ve `PlayerInitialSpawn` kullanılır. `weapon`, `command` ve özel ödüller çalışır. |
+| **Sandbox sunucu** | `PlayerSay` ve `PlayerInitialSpawn` kullanılır. `weapon`, `command` ve özel ödüller çalışır. |
 | **Diğer eklentiler** | `command` tipiyle (örn. `ulx`/`sam` komutları, `{steamid}` `{steamid64}` `{userid}` `{name}` yer tutucularıyla) veya özel `Grant` fonksiyonuyla herhangi bir sisteme bağlanabilir. |
 
 Çerçeve açılışta otomatik algılanır, ayrıca ayar yapmaya gerek yoktur.
